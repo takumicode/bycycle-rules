@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自転車標識クイズ｜青切符に備える</title>
+<meta name="description" content="2026年から自転車にも青切符制度が導入されました。道路標識の自転車関連ルールを4択クイズで確認しましょう。">
+<meta property="og:title" content="自転車標識クイズ｜青切符に備える">
+<meta property="og:description" content="自転車の道路標識を4択クイズで学べるサイト。青切符制度の前に知識をチェック。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="l-header">
+  <div class="l-header__inner u-inner">
+    <p class="l-header__en u-en2">BICYCLE SIGN QUIZ</p>
+    <h1 class="l-header__ttl">自転車標識クイズ</h1>
+    <p class="l-header__lead">2026年4月から、自転車にも<strong>青切符</strong>制度が導入されました。<br>道路標識の意味、ちゃんと理解していますか？</p>
+  </div>
+</header>
+
+<main class="l-main">
+  <section class="u-section l-quiz">
+    <div class="l-quiz__inner u-inner">
+
+      <div class="c-progress">
+        <div class="c-progress__bar"><span class="c-progress__fill" id="progressFill"></span></div>
+        <p class="c-progress__txt"><span id="qIndex">1</span> / <span id="qTotal">10</span> 問</p>
+      </div>
+
+      <div class="l-quiz__card" id="quizCard">
+        <div class="l-quiz__sign u-img">
+          <img id="signImage" src="" alt="標識">
+        </div>
+        <p class="l-quiz__question">この標識の意味は？</p>
+        <ul class="l-quiz__choices" id="choices"></ul>
+        <div class="l-quiz__result" id="result" hidden>
+          <p class="l-quiz__result-judge" id="judge"></p>
+          <p class="l-quiz__result-name">正解：<span id="answerName"></span></p>
+          <p class="l-quiz__result-explain" id="explain"></p>
+          <button type="button" class="c-btn --next" id="nextBtn">
+            <span class="txt">次の問題へ</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="l-quiz__final" id="final" hidden>
+        <p class="l-quiz__final-en u-en2">RESULT</p>
+        <h2 class="l-quiz__final-ttl">スコア</h2>
+        <p class="l-quiz__final-score"><span id="finalScore">0</span> / <span id="finalTotal">10</span></p>
+        <p class="l-quiz__final-msg" id="finalMsg"></p>
+        <div class="l-quiz__final-btns">
+          <button type="button" class="c-btn" id="retryBtn"><span class="txt">もう一度</span></button>
+          <a class="c-btn --twitter" id="tweetBtn" href="#" target="_blank" rel="noopener"><span class="txt">結果をXに投稿</span></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="l-footer">
+  <div class="l-footer__inner u-inner">
+    <p class="l-footer__txt">標識画像：Wikimedia Commons（パブリックドメイン）</p>
+    <p class="l-footer__txt l-footer__note">本サイトは学習目的の参考情報です。正確な交通ルールは警察庁・公的資料をご確認ください。</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
