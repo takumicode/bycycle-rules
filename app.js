@@ -1,5 +1,5 @@
 (async () => {
-  const QUESTIONS_PER_GAME = 10;
+  const QUESTIONS_PER_GAME = 15;
   const res = await fetch('data/signs.json');
   const SIGNS = await res.json();
 
