@@ -44,8 +44,10 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 /* quiz card */
 .l-quiz__card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 32px 24px; box-shadow: 0 2px 20px rgba(1, 29, 84, 0.04); }
-.l-quiz__sign { width: 180px; height: 180px; margin: 0 auto 24px; background: var(--bg); border-radius: 8px; padding: 16px; }
+.l-quiz__sign-area { display: flex; flex-direction: column; align-items: center; margin: 0 auto 24px; }
+.l-quiz__sign { width: 180px; height: 180px; background: var(--bg); border-radius: 8px; padding: 16px; }
 .l-quiz__sign img { width: 100%; height: 100%; object-fit: contain; position: static; transform: none; }
+.l-quiz__supplement { margin-top: 4px; background: #fff; border: 2px solid #1a1a1a; color: #1a1a1a; font-weight: 700; padding: 6px 14px; font-size: 14px; text-align: center; min-width: 120px; letter-spacing: 0.04em; line-height: 1.3; }
 .l-quiz__question { text-align: center; font-size: 16px; font-weight: 700; margin: 0 0 20px; color: var(--navy); }
 .l-quiz__choices { display: flex; flex-direction: column; gap: 10px; }
 .l-quiz__choice { width: 100%; text-align: left; padding: 14px 18px; background: var(--bg); border: 2px solid transparent; border-radius: 8px; font-size: 14px; transition: .2s ease-out; transition-property: background, border-color, color; }
@@ -84,5 +86,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 @media (max-width: 767px) {
   .l-header__ttl { font-size: 22px; }
   .l-quiz__sign { width: 140px; height: 140px; }
+  .l-quiz__supplement { font-size: 13px; min-width: 100px; padding: 5px 10px; }
   .l-quiz__final-score { font-size: 40px; }
 }

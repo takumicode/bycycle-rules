@@ -210,6 +210,54 @@
     "wrong": ["横断歩道", "自転車専用通行帯", "自転車及び歩行者専用"]
   },
   {
+    "id": "303+except-bicycle",
+    "name": "自転車を除いて進入禁止",
+    "image": "images/signs/Japan_road_sign_303.svg",
+    "supplement": "自転車を除く",
+    "explanation": "車両進入禁止だが、補助標識「自転車を除く」により自転車は進入できる。一方通行の出口側などでよく見られる。",
+    "wrong": ["全ての車両が進入禁止", "自転車のみ進入禁止", "歩行者のみ通行可"]
+  },
+  {
+    "id": "326-B+except-bicycle",
+    "name": "自転車は逆走してよい一方通行",
+    "image": "images/signs/Japan_road_sign_326-B.svg",
+    "supplement": "自転車を除く",
+    "explanation": "自動車は一方通行だが、自転車は補助標識により双方向通行できる。自転車専用の「自転車一方通行」標識とは別物。",
+    "wrong": ["自転車も矢印方向のみ通行可", "自転車専用の一方通行", "自転車通行止め"]
+  },
+  {
+    "id": "316+8-20",
+    "name": "8時から20時まで駐車禁止",
+    "image": "images/signs/Japan_road_sign_316.svg",
+    "supplement": "8-20",
+    "explanation": "表示された時間帯のみ駐車禁止。それ以外の時間は駐車できる。停車は時間問わず可。",
+    "wrong": ["20時から翌8時まで駐車禁止", "毎日終日駐車禁止", "8時から20時まで駐停車禁止"]
+  },
+  {
+    "id": "315+except-sun",
+    "name": "日曜・休日を除いて駐停車禁止",
+    "image": "images/signs/Japan_road_sign_315.svg",
+    "supplement": "日曜・休日を除く",
+    "explanation": "平日は駐停車禁止だが、日曜・祝日は駐停車できる。補助標識「〜を除く」は除外条件を示す。",
+    "wrong": ["日曜・休日のみ駐停車禁止", "毎日終日駐停車禁止", "日曜・休日のみ駐車のみ禁止"]
+  },
+  {
+    "id": "315+here-from",
+    "name": "ここから駐停車禁止区間",
+    "image": "images/signs/Japan_road_sign_315.svg",
+    "supplement": "ここから",
+    "explanation": "この地点から「ここまで」の補助標識が出るまで、駐停車禁止区間が続くことを示す。",
+    "wrong": ["この地点だけ駐停車禁止", "ここから先は駐停車できる", "ここで一時停止"]
+  },
+  {
+    "id": "309+sun-holiday",
+    "name": "日曜・休日のみ自転車通行止め",
+    "image": "images/signs/Japan_road_sign_309.svg",
+    "supplement": "日曜・休日",
+    "explanation": "補助標識に書かれた条件のみ規制が適用される。平日は自転車も通行できる。",
+    "wrong": ["日曜・休日を除いて通行止め", "毎日自転車通行止め", "日曜・休日は歩行者も通行止め"]
+  },
+  {
     "id": "407-3",
     "name": "横断歩道・自転車横断帯",
     "image": "images/signs/Japan_road_sign_407-3.svg",

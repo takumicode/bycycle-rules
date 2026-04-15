@@ -37,6 +37,15 @@
     $('signImage').src = q.sign.image;
     $('signImage').alt = '道路標識';
 
+    const sup = $('supplement');
+    if (q.sign.supplement) {
+      sup.textContent = q.sign.supplement;
+      sup.hidden = false;
+    } else {
+      sup.hidden = true;
+      sup.textContent = '';
+    }
+
     const ul = $('choices');
     ul.innerHTML = '';
     q.choices.forEach((choice) => {
