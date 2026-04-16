@@ -1,7 +1,23 @@
-(async () => {
+(() => {
   const QUESTIONS_PER_GAME = 15;
-  const res = await fetch('data/signs.json');
-  const SIGNS = await res.json();
+
+  const MODES = {
+    bicycle: {
+      dataUrl: 'data/signs-bicycle.json',
+      title: '自転車標識クイズ',
+      lead: '自転車にも<strong>青切符</strong>の時代。<br>道路標識の意味、ちゃんと理解していますか？',
+      tweetHook: '自転車にも青切符。標識、ちゃんと覚えてる？'
+    },
+    car: {
+      dataUrl: 'data/signs-car.json',
+      title: '自動車標識クイズ',
+      lead: '意外と忘れている道路標識。<br>免許を取った時の知識、今も正確ですか？',
+      tweetHook: '運転中に見る標識、正確に覚えてる？'
+    }
+  };
+
+  const $ = (id) => document.getElementById(id);
+  const state = { mode: null, signs: [], questions: [], index: 0, score: 0, answered: false };
 
   const shuffle = (a) => {
     const arr = a.slice();
@@ -12,12 +28,8 @@
     return arr;
   };
 
-  const state = { questions: [], index: 0, score: 0, answered: false };
-
-  const $ = (id) => document.getElementById(id);
-
   const buildQuestions = () => {
-    const pool = shuffle(SIGNS);
+    const pool = shuffle(state.signs);
     const take = Math.min(QUESTIONS_PER_GAME, pool.length);
     return pool.slice(0, take).map((sign) => {
       const distractors = shuffle(sign.wrong).slice(0, 3);
@@ -84,12 +96,6 @@
     $('progressFill').style.width = `${((state.index + 1) / state.questions.length) * 100}%`;
   };
 
-  $('nextBtn').addEventListener('click', () => {
-    state.index++;
-    if (state.index >= state.questions.length) showFinal();
-    else render();
-  });
-
   const showFinal = () => {
     $('quizCard').hidden = true;
     document.querySelector('.c-progress').hidden = true;
@@ -99,27 +105,74 @@
 
     const ratio = state.score / state.questions.length;
     let msg;
-    if (ratio === 1) msg = '完璧です。青切符とは無縁の生活を送れるでしょう。';
+    if (ratio === 1) msg = '完璧です。公道を走る資格あり。';
     else if (ratio >= 0.8) msg = '優秀。大半の標識は理解できています。';
     else if (ratio >= 0.5) msg = 'もう一歩。うっかり違反にご注意を。';
-    else msg = '復習が必要です。青切符の前に、今ここで学び直しましょう。';
+    else msg = '復習が必要です。違反切符の前に、今ここで学び直しましょう。';
     $('finalMsg').textContent = msg;
 
-    const tweetText = `自転車標識クイズで ${state.score}/${state.questions.length} 問正解しました。\n2026年から自転車にも青切符。標識、ちゃんと覚えてる？`;
-    const url = location.href.split('?')[0];
+    const hook = MODES[state.mode].tweetHook;
+    const modeLabel = state.mode === 'car' ? '自動車' : '自転車';
+    const tweetText = `${modeLabel}標識クイズで ${state.score}/${state.questions.length} 問正解しました。\n${hook}`;
+    const url = `${location.origin}${location.pathname}?mode=${state.mode}`;
     $('tweetBtn').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(url)}`;
   };
 
-  $('retryBtn').addEventListener('click', () => {
+  const startQuiz = async (mode) => {
+    state.mode = mode;
+    const conf = MODES[mode];
+    $('headerTitle').textContent = conf.title;
+    $('headerLead').innerHTML = conf.lead;
+    document.title = `${conf.title}｜道路標識を4択でチェック`;
+
+    if (!state.signs.length || state.signs._mode !== mode) {
+      const res = await fetch(conf.dataUrl);
+      const data = await res.json();
+      data._mode = mode;
+      state.signs = data;
+    }
+
     state.questions = buildQuestions();
     state.index = 0;
     state.score = 0;
+
+    $('modeSelect').hidden = true;
+    $('quizSection').hidden = false;
     $('quizCard').hidden = false;
     document.querySelector('.c-progress').hidden = false;
     $('final').hidden = true;
+
+    history.replaceState(null, '', `?mode=${mode}`);
     render();
+  };
+
+  const backToSelect = () => {
+    state.mode = null;
+    state.signs = [];
+    $('headerTitle').textContent = '道路標識クイズ';
+    $('headerLead').innerHTML = '自転車にも<strong>青切符</strong>の時代。<br>道路標識の意味、ちゃんと理解していますか？';
+    document.title = '道路標識クイズ｜自転車・自動車の標識を4択でチェック';
+    $('modeSelect').hidden = false;
+    $('quizSection').hidden = true;
+    history.replaceState(null, '', location.pathname);
+  };
+
+  document.querySelectorAll('.c-mode').forEach((btn) => {
+    btn.addEventListener('click', () => startQuiz(btn.dataset.mode));
   });
 
-  state.questions = buildQuestions();
-  render();
+  $('nextBtn').addEventListener('click', () => {
+    state.index++;
+    if (state.index >= state.questions.length) showFinal();
+    else render();
+  });
+
+  $('retryBtn').addEventListener('click', () => startQuiz(state.mode));
+  $('backBtn').addEventListener('click', backToSelect);
+
+  const params = new URLSearchParams(location.search);
+  const initialMode = params.get('mode');
+  if (initialMode && MODES[initialMode]) {
+    startQuiz(initialMode);
+  }
 })();

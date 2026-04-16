@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>自転車標識クイズ｜青切符に備える</title>
-<meta name="description" content="2026年から自転車にも青切符制度が導入されました。道路標識の自転車関連ルールを4択クイズで確認しましょう。">
-<meta property="og:title" content="自転車標識クイズ｜青切符に備える">
-<meta property="og:description" content="自転車の道路標識を4択クイズで学べるサイト。青切符制度の前に知識をチェック。">
+<title>道路標識クイズ｜自転車・自動車の標識を4択でチェック</title>
+<meta name="description" content="自転車の青切符制度に対応。自転車・自動車それぞれの道路標識を4択クイズで学べます。補助標識問題も収録。">
+<meta property="og:title" content="道路標識クイズ｜自転車・自動車">
+<meta property="og:description" content="自転車・自動車の道路標識を4択で学ぶ。補助標識の引っ掛け問題も収録。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,19 +17,39 @@
 <body>
 <header class="l-header">
   <div class="l-header__inner u-inner">
-    <p class="l-header__en u-en2">BICYCLE SIGN QUIZ</p>
-    <h1 class="l-header__ttl">自転車標識クイズ</h1>
-    <p class="l-header__lead">2026年4月から、自転車にも<strong>青切符</strong>制度が導入されました。<br>道路標識の意味、ちゃんと理解していますか？</p>
+    <p class="l-header__en u-en2">ROAD SIGN QUIZ</p>
+    <h1 class="l-header__ttl" id="headerTitle">道路標識クイズ</h1>
+    <p class="l-header__lead" id="headerLead">自転車にも<strong>青切符</strong>の時代。<br>道路標識の意味、ちゃんと理解していますか？</p>
   </div>
 </header>
 
 <main class="l-main">
-  <section class="u-section l-quiz">
+
+  <section class="u-section l-select" id="modeSelect">
+    <div class="l-select__inner u-inner">
+      <p class="l-select__en u-en2">SELECT MODE</p>
+      <h2 class="l-select__ttl">モードを選択</h2>
+      <div class="l-select__cards">
+        <button type="button" class="c-mode" data-mode="bicycle">
+          <span class="c-mode__icon">🚲</span>
+          <span class="c-mode__name">自転車モード</span>
+          <span class="c-mode__desc">自転車関連の標識37種から出題<br>補助標識の引っ掛け問題も収録</span>
+        </button>
+        <button type="button" class="c-mode" data-mode="car">
+          <span class="c-mode__icon">🚗</span>
+          <span class="c-mode__name">自動車モード</span>
+          <span class="c-mode__desc">自動車関連の標識43種から出題<br>規制・警戒・指示標識を網羅</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="u-section l-quiz" id="quizSection" hidden>
     <div class="l-quiz__inner u-inner">
 
       <div class="c-progress">
         <div class="c-progress__bar"><span class="c-progress__fill" id="progressFill"></span></div>
-        <p class="c-progress__txt"><span id="qIndex">1</span> / <span id="qTotal">10</span> 問</p>
+        <p class="c-progress__txt"><span id="qIndex">1</span> / <span id="qTotal">15</span> 問</p>
       </div>
 
       <div class="l-quiz__card" id="quizCard">
@@ -54,16 +74,18 @@
       <div class="l-quiz__final" id="final" hidden>
         <p class="l-quiz__final-en u-en2">RESULT</p>
         <h2 class="l-quiz__final-ttl">スコア</h2>
-        <p class="l-quiz__final-score"><span id="finalScore">0</span> / <span id="finalTotal">10</span></p>
+        <p class="l-quiz__final-score"><span id="finalScore">0</span> / <span id="finalTotal">15</span></p>
         <p class="l-quiz__final-msg" id="finalMsg"></p>
         <div class="l-quiz__final-btns">
           <button type="button" class="c-btn" id="retryBtn"><span class="txt">もう一度</span></button>
+          <button type="button" class="c-btn --ghost" id="backBtn"><span class="txt">モード選択に戻る</span></button>
           <a class="c-btn --twitter" id="tweetBtn" href="#" target="_blank" rel="noopener"><span class="txt">結果をXに投稿</span></a>
         </div>
       </div>
 
     </div>
   </section>
+
 </main>
 
 <footer class="l-footer">

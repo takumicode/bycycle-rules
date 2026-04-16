@@ -1,0 +1,306 @@
+[
+  {
+    "id": "301",
+    "name": "車両通行止め",
+    "image": "images/signs/Japan_road_sign_301.svg",
+    "explanation": "歩行者以外の全ての車両（自動車・自転車・原付など）が通行禁止。",
+    "wrong": ["自動車以外通行可", "一方通行", "車両進入禁止"]
+  },
+  {
+    "id": "303",
+    "name": "車両進入禁止",
+    "image": "images/signs/Japan_road_sign_303.svg",
+    "explanation": "一方通行の出口側などで、標識の向いている方向から進入できない。",
+    "wrong": ["車両通行止め", "一方通行（進入可）", "駐停車禁止"]
+  },
+  {
+    "id": "304",
+    "name": "二輪の自動車以外の自動車通行止め",
+    "image": "images/signs/Japan_road_sign_304.svg",
+    "explanation": "二輪車以外の自動車（普通車・トラックなど）は通行禁止。バイクと原付は通れる。",
+    "wrong": ["二輪の自動車通行止め", "自動車専用", "大型貨物自動車等通行止め"]
+  },
+  {
+    "id": "305",
+    "name": "大型貨物自動車等通行止め",
+    "image": "images/signs/Japan_road_sign_305.svg",
+    "explanation": "大型貨物自動車・特定中型貨物自動車・大型特殊自動車の通行禁止。普通車は通れる。",
+    "wrong": ["大型乗用自動車等通行止め", "貨物自動車全て通行止め", "重量制限"]
+  },
+  {
+    "id": "306",
+    "name": "大型乗用自動車等通行止め",
+    "image": "images/signs/Japan_road_sign_306.svg",
+    "explanation": "大型バスや中型バスなどの大型乗用自動車が通行禁止。",
+    "wrong": ["大型貨物自動車等通行止め", "路線バス通行止め", "タクシー通行止め"]
+  },
+  {
+    "id": "307",
+    "name": "二輪の自動車・原動機付自転車通行止め",
+    "image": "images/signs/Japan_road_sign_307.svg",
+    "explanation": "オートバイと原付は通行禁止。自動車と自転車は通れる。",
+    "wrong": ["自転車通行止め", "自動車通行止め", "原付のみ通行止め"]
+  },
+  {
+    "id": "308",
+    "name": "自転車以外の軽車両通行止め",
+    "image": "images/signs/Japan_road_sign_308.svg",
+    "explanation": "リヤカー・荷車などは通行禁止。自転車は通れる。",
+    "wrong": ["自転車通行止め", "軽車両全て通行止め", "歩行者通行止め"]
+  },
+  {
+    "id": "311-D",
+    "name": "指定方向外進行禁止（左折または右折）",
+    "image": "images/signs/Japan_road_sign_311-D.svg",
+    "explanation": "矢印で示された方向以外への進行を禁止。直進は不可。",
+    "wrong": ["右折禁止", "転回禁止", "左折禁止"]
+  },
+  {
+    "id": "312",
+    "name": "車両横断禁止",
+    "image": "images/signs/Japan_road_sign_312.svg",
+    "explanation": "右折して道路を横断すること（沿道の店舗への右折進入など）を禁止。",
+    "wrong": ["転回禁止", "追越し禁止", "指定方向外進行禁止"]
+  },
+  {
+    "id": "313",
+    "name": "転回禁止",
+    "image": "images/signs/Japan_road_sign_313.svg",
+    "explanation": "Uターンを禁止する。",
+    "wrong": ["車両横断禁止", "右折禁止", "追越し禁止"]
+  },
+  {
+    "id": "314",
+    "name": "追越し禁止",
+    "image": "images/signs/Japan_road_sign_314.svg",
+    "explanation": "追い越しのために進路を変更することを禁止。白い補助板があれば「追越しのための右側部分はみ出し通行禁止」。",
+    "wrong": ["進路変更禁止", "車線変更禁止", "車両横断禁止"]
+  },
+  {
+    "id": "315",
+    "name": "駐停車禁止",
+    "image": "images/signs/Japan_road_sign_315.svg",
+    "explanation": "駐車も停車も禁止。人の乗り降りのための数分停止も不可。",
+    "wrong": ["駐車禁止（停車は可）", "停止禁止部分", "進入禁止"]
+  },
+  {
+    "id": "316",
+    "name": "駐車禁止",
+    "image": "images/signs/Japan_road_sign_316.svg",
+    "explanation": "駐車は禁止、停車（人の乗降、5分以内の荷物の積み下ろし）は可。",
+    "wrong": ["駐停車禁止", "停止禁止", "一時停止"]
+  },
+  {
+    "id": "319",
+    "name": "危険物積載車両通行止め",
+    "image": "images/signs/Japan_road_sign_319.svg",
+    "explanation": "火薬類・毒物などの危険物を積載している車両は通行禁止。トンネルや橋梁部で多い。",
+    "wrong": ["重量制限", "大型貨物自動車等通行止め", "タンクローリー通行止め"]
+  },
+  {
+    "id": "320",
+    "name": "重量制限",
+    "image": "images/signs/Japan_road_sign_320.svg",
+    "explanation": "表示された総重量（トン）を超える車両は通行禁止。橋梁部などに設置。",
+    "wrong": ["最大積載量制限", "高さ制限", "軸重制限"]
+  },
+  {
+    "id": "321",
+    "name": "高さ制限",
+    "image": "images/signs/Japan_road_sign_321.svg",
+    "explanation": "表示された高さを超える車両（荷物含む）は通行禁止。トンネル・高架下で注意。",
+    "wrong": ["幅制限", "重量制限", "車線幅員"]
+  },
+  {
+    "id": "322",
+    "name": "最大幅",
+    "image": "images/signs/Japan_road_sign_322.svg",
+    "explanation": "表示された幅を超える車両は通行禁止。狭い道路などに設置。",
+    "wrong": ["高さ制限", "車線数減少", "幅員減少"]
+  },
+  {
+    "id": "323",
+    "name": "最高速度",
+    "image": "images/signs/Japan_road_sign_323_(50).svg",
+    "explanation": "表示された速度を超えてはならない。違反は点数・反則金の対象。",
+    "wrong": ["最低速度", "推奨速度", "規制予告"]
+  },
+  {
+    "id": "324",
+    "name": "最低速度",
+    "image": "images/signs/Japan_road_sign_324_(30).svg",
+    "explanation": "表示された速度未満で走行してはならない。高速道路などで設置。下線の有無で最高速度と区別。",
+    "wrong": ["最高速度", "推奨速度", "規制解除"]
+  },
+  {
+    "id": "325",
+    "name": "自動車専用",
+    "image": "images/signs/Japan_road_sign_325.svg",
+    "explanation": "高速自動車国道や自動車専用道路を示す。原付・自転車・歩行者は通行不可。",
+    "wrong": ["自動車優先", "高速道路", "一方通行"]
+  },
+  {
+    "id": "326-B",
+    "name": "一方通行",
+    "image": "images/signs/Japan_road_sign_326-B.svg",
+    "explanation": "矢印の方向にのみ通行可。逆方向は車両進入禁止となる。",
+    "wrong": ["指定方向外進行禁止", "優先道路", "中央線"]
+  },
+  {
+    "id": "329",
+    "name": "徐行",
+    "image": "images/signs/Japan_road_sign_329.svg",
+    "explanation": "すぐ停止できる速度（目安は時速10km以下）で走行する義務。",
+    "wrong": ["一時停止", "最低速度", "規制解除"]
+  },
+  {
+    "id": "330",
+    "name": "一時停止",
+    "image": "images/signs/Japan_road_sign_330.svg",
+    "explanation": "停止線の直前で完全停止し、安全確認をする義務。タイヤが完全に止まる必要がある。",
+    "wrong": ["徐行", "前方優先道路", "停止禁止部分"]
+  },
+  {
+    "id": "405",
+    "name": "優先道路",
+    "image": "images/signs/Japan_road_sign_405.svg",
+    "explanation": "この道路が交差する道路に対して優先することを示す。信号のない交差点で重要。",
+    "wrong": ["中央線", "一方通行", "直進可"]
+  },
+  {
+    "id": "406",
+    "name": "中央線",
+    "image": "images/signs/Japan_road_sign_406.svg",
+    "explanation": "道路の中央線の位置を示す。標示と併用されることが多い。",
+    "wrong": ["優先道路", "車線数減少", "追越し可"]
+  },
+  {
+    "id": "408",
+    "name": "安全地帯",
+    "image": "images/signs/Japan_road_sign_408.svg",
+    "explanation": "路面電車の乗降客や横断中の歩行者の安全のために設けられた場所。車両は侵入できない。",
+    "wrong": ["路面電車停留所", "横断歩道", "駐停車禁止"]
+  },
+  {
+    "id": "407-A",
+    "name": "横断歩道",
+    "image": "images/signs/Japan_road_sign_407-A.svg",
+    "explanation": "横断歩道を示す。横断しようとする歩行者がいる時は一時停止義務あり。",
+    "wrong": ["自転車横断帯", "歩行者専用", "安全地帯"]
+  },
+  {
+    "id": "407-B",
+    "name": "横断歩道（学童注意）",
+    "image": "images/signs/Japan_road_sign_407-B.svg",
+    "explanation": "学童が多く利用する横断歩道。通学時間帯は特に徐行・注意。",
+    "wrong": ["スクールゾーン", "子供注意", "自転車横断帯"]
+  },
+  {
+    "id": "201-2",
+    "name": "ロータリーあり",
+    "image": "images/signs/Japan_road_sign_201-2.svg",
+    "explanation": "前方にロータリー（環状）交差点があることを示す警戒標識。",
+    "wrong": ["交差点あり", "合流交通あり", "車線数減少"]
+  },
+  {
+    "id": "207-A",
+    "name": "踏切あり（蒸気機関車）",
+    "image": "images/signs/Japan_road_sign_207-A.svg",
+    "explanation": "前方に踏切があることを示す警戒標識。踏切では一時停止と安全確認の義務。",
+    "wrong": ["駅あり", "工場あり", "落石注意"]
+  },
+  {
+    "id": "207-B",
+    "name": "踏切あり（電車）",
+    "image": "images/signs/Japan_road_sign_207-B.svg",
+    "explanation": "前方に踏切があることを示す警戒標識。蒸気機関車のイラストの場合と意味は同じ。",
+    "wrong": ["路面電車停留所", "バス停", "駅あり"]
+  },
+  {
+    "id": "208-2",
+    "name": "信号機あり",
+    "image": "images/signs/Japan_road_sign_208-2.svg",
+    "explanation": "前方に信号機があることを示す警戒標識。見通しの悪い場所に設置される。",
+    "wrong": ["交差点あり", "横断歩道あり", "踏切あり"]
+  },
+  {
+    "id": "209",
+    "name": "すべりやすい",
+    "image": "images/signs/Japan_road_sign_209.svg",
+    "explanation": "路面がすべりやすいことを警告。雨天時・凍結時は特に注意。",
+    "wrong": ["急な下り坂", "路肩注意", "落石注意"]
+  },
+  {
+    "id": "210",
+    "name": "合流交通あり",
+    "image": "images/signs/Japan_road_sign_210.svg",
+    "explanation": "前方で他の道路から車両が合流してくる警戒標識。高速の合流部などに設置。",
+    "wrong": ["分岐あり", "T字路あり", "車線数減少"]
+  },
+  {
+    "id": "212",
+    "name": "幅員減少",
+    "image": "images/signs/Japan_road_sign_212.svg",
+    "explanation": "前方で道路の幅が狭くなる警戒標識。車線数は変わらない。",
+    "wrong": ["車線数減少", "ロータリーあり", "上り急勾配"]
+  },
+  {
+    "id": "212-2",
+    "name": "二方向交通",
+    "image": "images/signs/Japan_road_sign_212-2.svg",
+    "explanation": "一方通行が終わり対向車と行き違う区間になることを示す警戒標識。",
+    "wrong": ["中央線あり", "車線数減少", "合流交通あり"]
+  },
+  {
+    "id": "213",
+    "name": "道路工事中",
+    "image": "images/signs/Japan_road_sign_213.svg",
+    "explanation": "前方で道路工事が行われていることを示す警戒標識。",
+    "wrong": ["歩行者あり", "子供注意", "横断歩道あり"]
+  },
+  {
+    "id": "214",
+    "name": "横風注意",
+    "image": "images/signs/Japan_road_sign_214.svg",
+    "explanation": "横風が吹きやすい区間であることを示す警戒標識。橋梁・海沿いで多い。",
+    "wrong": ["落石注意", "強風注意", "ハンドル取られ注意"]
+  },
+  {
+    "id": "214-2",
+    "name": "動物が飛び出すおそれあり",
+    "image": "images/signs/Japan_road_sign_214-2.svg",
+    "explanation": "野生動物が道路に飛び出す恐れがある区間を示す警戒標識。山間部で多い。",
+    "wrong": ["家畜横断", "牧場あり", "自然保護区"]
+  },
+  {
+    "id": "215",
+    "name": "その他の危険",
+    "image": "images/signs/Japan_road_sign_215.svg",
+    "explanation": "上記以外の危険がある場合に設置。具体的な危険の内容は補助標識で示されることが多い。",
+    "wrong": ["工事中", "事故多発区間", "規制予告"]
+  },
+  {
+    "id": "314+truck",
+    "name": "大型貨物自動車のみ追越し禁止",
+    "image": "images/signs/Japan_road_sign_314.svg",
+    "supplement": "大型貨物",
+    "explanation": "補助標識で対象車両を限定。普通車は追越し可、大型貨物のみ禁止。",
+    "wrong": ["全車両追越し禁止", "大型貨物追越し可", "大型車は駐停車禁止"]
+  },
+  {
+    "id": "316+tue-fri",
+    "name": "火曜・金曜のみ駐車禁止",
+    "image": "images/signs/Japan_road_sign_316.svg",
+    "supplement": "火・金",
+    "explanation": "補助標識で規制の曜日を限定。月水木土日は駐車可。",
+    "wrong": ["火・金以外は駐車禁止", "毎日駐車禁止", "火・金は駐停車禁止"]
+  },
+  {
+    "id": "323+large",
+    "name": "大型車の最高速度50km/h",
+    "image": "images/signs/Japan_road_sign_323_(50).svg",
+    "supplement": "大型",
+    "explanation": "補助標識で対象車両を限定。普通車は通常規制、大型車はこの速度制限となる。",
+    "wrong": ["全車両50km/h制限", "大型車のみ50km/h以上で走行", "大型車通行止め"]
+  }
+]

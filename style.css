@@ -36,6 +36,17 @@ ul { list-style: none; margin: 0; padding: 0; }
 .l-header__lead { font-size: 14px; margin: 0; color: var(--black); }
 .l-header__lead strong { color: var(--red); font-weight: 700; }
 
+/* mode select */
+.l-select { text-align: center; }
+.l-select__en { color: var(--gold); font-size: 13px; margin: 0 0 4px; }
+.l-select__ttl { font-size: 22px; margin: 0 0 32px; color: var(--navy); }
+.l-select__cards { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.c-mode { display: flex; flex-direction: column; align-items: center; gap: 8px; background: var(--card); border: 2px solid var(--border); border-radius: 12px; padding: 28px 20px; width: 260px; transition: .2s ease-out; transition-property: border-color, transform, box-shadow; cursor: pointer; text-align: center; }
+.c-mode:hover { border-color: var(--navy); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(1,29,84,0.1); }
+.c-mode__icon { font-size: 48px; line-height: 1; }
+.c-mode__name { font-size: 18px; font-weight: 700; color: var(--navy); letter-spacing: 0.04em; }
+.c-mode__desc { font-size: 12px; color: #666; line-height: 1.6; }
+
 /* progress */
 .c-progress { margin-bottom: 24px; }
 .c-progress__bar { width: 100%; height: 6px; background: var(--border); border-radius: 999px; overflow: hidden; }
@@ -69,6 +80,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .c-btn:hover { opacity: 0.8; }
 .c-btn.--next { display: flex; width: 100%; }
 .c-btn.--twitter { background: #000; }
+.c-btn.--ghost { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
 
 /* final */
 .l-quiz__final { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 40px 24px; text-align: center; }
